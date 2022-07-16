@@ -1,0 +1,4 @@
+# Booth-s-multiplier
+
+This Booth's multiplier uses radix 2 Booths' Multiplication algorithm that significantly reduces the number of additions and subtractions required for addition of partial products. The basic idea lies in the fact that in the binary multiplication of the numbers if any bit of multiplier is 'zero', it results in a partial product that is 'zero' so there is no point adding that partial product as ultimately that will give the same result. So this algorithm compares the last two significant bits of multiplier and if there are two consecutive zero or two consecutive ones, no addition is performed but only one right shift is performed (partial products are added after shifting). This way we can save significant amount of clock cycles and thus increase the speed of the hardware.
+
